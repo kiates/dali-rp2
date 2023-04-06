@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{21de6965-e7a9-45bf-bc35-9aafe37f7ddf}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>dali_us.py</StartupFile>
+    <StartupFile>ide\dali_us.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -30,6 +30,8 @@
     <Content Include="mypy.ini" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ide\dali_us.py" />
+    <Compile Include="ide\dali_jp.py" />
     <Compile Include="setup.py" />
     <Compile Include="src\dali\abstract_ccxt_input_plugin.py" />
     <Compile Include="src\dali\abstract_input_plugin.py" />
@@ -99,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config" />
+    <Folder Include="ide\" />
     <Folder Include="input" />
     <Folder Include="src\" />
     <Folder Include="src\dali" />

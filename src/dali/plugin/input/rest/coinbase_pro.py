@@ -70,6 +70,7 @@ _TRADE_ID: str = "trade_id"
 _TRANSFER: str = "transfer"
 _TRANSFER_ID: str = "transfer_id"
 _TRANSFER_TYPE: str = "transfer_type"
+_TX_SERVICE_TRANSACTION_ID: str = "tx_service_transaction_id"
 _TYPE: str = "type"
 _USD_VOLUME: str = "usd_volume"
 _WITHDRAW: str = "withdraw"
@@ -236,6 +237,10 @@ class InputPlugin(AbstractInputPlugin):
             return
 
         if _COINBASE_TRANSACTION_ID in transfer_details:
+            self.__logger.debug("Transfer is a Coinbase transaction already captured by Coinbase plugin: ignoring.")
+            return
+
+        if _TX_SERVICE_TRANSACTION_ID not in transfer_details:
             self.__logger.debug("Transfer is a Coinbase transaction already captured by Coinbase plugin: ignoring.")
             return
 

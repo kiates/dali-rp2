@@ -27,4 +27,3 @@ src/*.egg-info/
 .vscode/
 _ReSharper.Caches/
 TestResults/
-/ide/log/*.log

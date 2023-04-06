@@ -1,4 +1,5 @@
-# Copyright 2023 Neal Chambers
+
+# Copyright 2022 eprbell
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-from rp2.plugin.country.jp import JP
-
+from rp2.plugin.country.us import JP
 from dali.dali_main import dali_main
 
-
-# JP-specific entry point
-def dali_entry() -> None:
+# This traditional entry point is used for debugging purposes only, dali_entry()
+# is normally called through the use of an installed console script in setup.py.
+if __name__ == '__main__':
     dali_main(JP())

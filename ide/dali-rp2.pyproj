@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{21de6965-e7a9-45bf-bc35-9aafe37f7ddf}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>..\src\dali\plugin\country\us.py</StartupFile>
+    <StartupFile>dali_us.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>..\</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -235,6 +235,8 @@
     <Compile Include="..\tests\test_transaction_resolver.py">
       <Link>tests/test_transaction_resolver.py</Link>
     </Compile>
+    <Compile Include="dali_jp.py" />
+    <Compile Include="dali_us.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config" />

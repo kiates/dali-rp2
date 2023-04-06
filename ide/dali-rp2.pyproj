@@ -5,9 +5,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{21de6965-e7a9-45bf-bc35-9aafe37f7ddf}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>src\dali\plugin\country\us.py</StartupFile>
+    <StartupFile>..\src\dali\plugin\country\us.py</StartupFile>
     <SearchPath />
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>..\</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
@@ -18,6 +18,7 @@
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>tests</UnitTestRootDirectory>
     <Environment>LOG_LEVEL=DEBUG</Environment>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -25,77 +26,215 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="config\test_config.ini" />
-    <Content Include="input\test_ods_rp2_input.ini" />
-    <Content Include="mypy.ini" />
+    <Content Include="..\config\test_config.ini">
+      <Link>config/test_config.ini</Link>
+    </Content>
+    <Content Include="..\input\test_ods_rp2_input.ini">
+      <Link>input/test_ods_rp2_input.ini</Link>
+    </Content>
+    <Content Include="..\mypy.ini">
+      <Link>mypy.ini</Link>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="setup.py" />
-    <Compile Include="src\dali\abstract_ccxt_input_plugin.py" />
-    <Compile Include="src\dali\abstract_input_plugin.py" />
-    <Compile Include="src\dali\abstract_pair_converter_plugin.py" />
-    <Compile Include="src\dali\abstract_transaction.py" />
-    <Compile Include="src\dali\cache.py" />
-    <Compile Include="src\dali\ccxt_pagination.py" />
-    <Compile Include="src\dali\configuration.py" />
-    <Compile Include="src\dali\configuration_generator.py" />
-    <Compile Include="src\dali\dali_main.py" />
-    <Compile Include="src\dali\data\__init__.py" />
-    <Compile Include="src\dali\historical_bar.py" />
-    <Compile Include="src\dali\intra_transaction.py" />
-    <Compile Include="src\dali\in_transaction.py" />
-    <Compile Include="src\dali\logger.py" />
-    <Compile Include="src\dali\ods_generator.py" />
-    <Compile Include="src\dali\out_transaction.py" />
-    <Compile Include="src\dali\plugin\country\jp.py" />
-    <Compile Include="src\dali\plugin\country\us.py" />
-    <Compile Include="src\dali\plugin\country\__init__.py" />
-    <Compile Include="src\dali\plugin\input\csv\binance_com_supplemental.py" />
-    <Compile Include="src\dali\plugin\input\csv\bitbank_supplemental.py" />
-    <Compile Include="src\dali\plugin\input\csv\blockfi.py" />
-    <Compile Include="src\dali\plugin\input\csv\coincheck_supplemental.py" />
-    <Compile Include="src\dali\plugin\input\csv\ledger.py" />
-    <Compile Include="src\dali\plugin\input\csv\manual.py" />
-    <Compile Include="src\dali\plugin\input\csv\nexo.py" />
-    <Compile Include="src\dali\plugin\input\csv\pionex.py" />
-    <Compile Include="src\dali\plugin\input\csv\trezor.py" />
-    <Compile Include="src\dali\plugin\input\csv\trezor_old.py" />
-    <Compile Include="src\dali\plugin\input\csv\trezor_v2.py" />
-    <Compile Include="src\dali\plugin\input\csv\__init__.py" />
-    <Compile Include="src\dali\plugin\input\ods\rp2_input.py" />
-    <Compile Include="src\dali\plugin\input\ods\__init__.py" />
-    <Compile Include="src\dali\plugin\input\rest\binance_com.py" />
-    <Compile Include="src\dali\plugin\input\rest\bitbank.py" />
-    <Compile Include="src\dali\plugin\input\rest\coinbase.py" />
-    <Compile Include="src\dali\plugin\input\rest\coinbase_pro.py" />
-    <Compile Include="src\dali\plugin\input\rest\__init__.py" />
-    <Compile Include="src\dali\plugin\input\__init__.py" />
-    <Compile Include="src\dali\plugin\pair_converter\ccxt.py" />
-    <Compile Include="src\dali\plugin\pair_converter\ccxt_binance.py" />
-    <Compile Include="src\dali\plugin\pair_converter\ccxt_kraken.py" />
-    <Compile Include="src\dali\plugin\pair_converter\csv\kraken.py" />
-    <Compile Include="src\dali\plugin\pair_converter\csv\__init__.py" />
-    <Compile Include="src\dali\plugin\pair_converter\historic_crypto.py" />
-    <Compile Include="src\dali\plugin\pair_converter\__init__.py" />
-    <Compile Include="src\dali\plugin\__init__.py" />
-    <Compile Include="src\dali\transaction_resolver.py" />
-    <Compile Include="src\dali\__init__.py" />
-    <Compile Include="tests\ods_diff.py" />
-    <Compile Include="tests\test_cache.py" />
-    <Compile Include="tests\test_historical_bar.py" />
-    <Compile Include="tests\test_ods_output_diff.py" />
-    <Compile Include="tests\test_plugin_binance_com.py" />
-    <Compile Include="tests\test_plugin_binance_com_supplemental_csv.py" />
-    <Compile Include="tests\test_plugin_bitbank_supplemental_csv.py" />
-    <Compile Include="tests\test_plugin_ccxt.py" />
-    <Compile Include="tests\test_plugin_coinbase.py" />
-    <Compile Include="tests\test_plugin_coinbase_pro.py" />
-    <Compile Include="tests\test_plugin_coincheck_supplemental.py" />
-    <Compile Include="tests\test_plugin_historic_crypto.py" />
-    <Compile Include="tests\test_plugin_kraken_csv_download.py" />
-    <Compile Include="tests\test_plugin_ods_rp2_input.py" />
-    <Compile Include="tests\test_plugin_pionex.py" />
-    <Compile Include="tests\test_transaction_resolver.py" />
+    <Compile Include="..\setup.py">
+      <Link>setup.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\abstract_ccxt_input_plugin.py">
+      <Link>src/dali/abstract_ccxt_input_plugin.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\abstract_input_plugin.py">
+      <Link>src/dali/abstract_input_plugin.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\abstract_pair_converter_plugin.py">
+      <Link>src/dali/abstract_pair_converter_plugin.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\abstract_transaction.py">
+      <Link>src/dali/abstract_transaction.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\cache.py">
+      <Link>src/dali/cache.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\ccxt_pagination.py">
+      <Link>src/dali/ccxt_pagination.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\configuration.py">
+      <Link>src/dali/configuration.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\configuration_generator.py">
+      <Link>src/dali/configuration_generator.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\dali_main.py">
+      <Link>src/dali/dali_main.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\data\__init__.py">
+      <Link>src/dali/data\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\historical_bar.py">
+      <Link>src/dali/historical_bar.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\intra_transaction.py">
+      <Link>src/dali/intra_transaction.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\in_transaction.py">
+      <Link>src/dali/in_transaction.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\logger.py">
+      <Link>src/dali/logger.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\ods_generator.py">
+      <Link>src/dali/ods_generator.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\out_transaction.py">
+      <Link>src/dali/out_transaction.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\country\jp.py">
+      <Link>src/dali/plugin\country\jp.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\country\us.py">
+      <Link>src/dali/plugin\country\us.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\country\__init__.py">
+      <Link>src/dali/plugin\country\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\binance_com_supplemental.py">
+      <Link>src/dali/plugin\input\csv\binance_com_supplemental.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\bitbank_supplemental.py">
+      <Link>src/dali/plugin\input\csv\bitbank_supplemental.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\blockfi.py">
+      <Link>src/dali/plugin\input\csv\blockfi.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\coincheck_supplemental.py">
+      <Link>src/dali/plugin\input\csv\coincheck_supplemental.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\ledger.py">
+      <Link>src/dali/plugin\input\csv\ledger.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\manual.py">
+      <Link>src/dali/plugin\input\csv\manual.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\nexo.py">
+      <Link>src/dali/plugin\input\csv\nexo.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\pionex.py">
+      <Link>src/dali/plugin\input\csv\pionex.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\trezor.py">
+      <Link>src/dali/plugin\input\csv\trezor.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\trezor_old.py">
+      <Link>src/dali/plugin\input\csv\trezor_old.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\trezor_v2.py">
+      <Link>src/dali/plugin\input\csv\trezor_v2.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\csv\__init__.py">
+      <Link>src/dali/plugin\input\csv\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\ods\rp2_input.py">
+      <Link>src/dali/plugin\input\ods\rp2_input.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\ods\__init__.py">
+      <Link>src/dali/plugin\input\ods\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\rest\binance_com.py">
+      <Link>src/dali/plugin\input\rest\binance_com.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\rest\bitbank.py">
+      <Link>src/dali/plugin\input\rest\bitbank.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\rest\coinbase.py">
+      <Link>src/dali/plugin\input\rest\coinbase.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\rest\coinbase_pro.py">
+      <Link>src/dali/plugin\input\rest\coinbase_pro.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\rest\__init__.py">
+      <Link>src/dali/plugin\input\rest\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\input\__init__.py">
+      <Link>src/dali/plugin\input\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\ccxt.py">
+      <Link>src/dali/plugin\pair_converter\ccxt.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\ccxt_binance.py">
+      <Link>src/dali/plugin\pair_converter\ccxt_binance.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\ccxt_kraken.py">
+      <Link>src/dali/plugin\pair_converter\ccxt_kraken.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\csv\kraken.py">
+      <Link>src/dali/plugin\pair_converter\csv\kraken.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\csv\__init__.py">
+      <Link>src/dali/plugin\pair_converter\csv\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\historic_crypto.py">
+      <Link>src/dali/plugin\pair_converter\historic_crypto.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\pair_converter\__init__.py">
+      <Link>src/dali/plugin\pair_converter\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\plugin\__init__.py">
+      <Link>src/dali/plugin\__init__.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\transaction_resolver.py">
+      <Link>src/dali/transaction_resolver.py</Link>
+    </Compile>
+    <Compile Include="..\src\dali\__init__.py">
+      <Link>src/dali/__init__.py</Link>
+    </Compile>
+    <Compile Include="..\tests\ods_diff.py">
+      <Link>tests/ods_diff.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_cache.py">
+      <Link>tests/test_cache.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_historical_bar.py">
+      <Link>tests/test_historical_bar.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_ods_output_diff.py">
+      <Link>tests/test_ods_output_diff.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_binance_com.py">
+      <Link>tests/test_plugin_binance_com.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_binance_com_supplemental_csv.py">
+      <Link>tests/test_plugin_binance_com_supplemental_csv.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_bitbank_supplemental_csv.py">
+      <Link>tests/test_plugin_bitbank_supplemental_csv.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_ccxt.py">
+      <Link>tests/test_plugin_ccxt.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_coinbase.py">
+      <Link>tests/test_plugin_coinbase.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_coinbase_pro.py">
+      <Link>tests/test_plugin_coinbase_pro.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_coincheck_supplemental.py">
+      <Link>tests/test_plugin_coincheck_supplemental.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_historic_crypto.py">
+      <Link>tests/test_plugin_historic_crypto.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_kraken_csv_download.py">
+      <Link>tests/test_plugin_kraken_csv_download.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_ods_rp2_input.py">
+      <Link>tests/test_plugin_ods_rp2_input.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_plugin_pionex.py">
+      <Link>tests/test_plugin_pionex.py</Link>
+    </Compile>
+    <Compile Include="..\tests\test_transaction_resolver.py">
+      <Link>tests/test_transaction_resolver.py</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config" />
@@ -114,7 +253,7 @@
     <Folder Include="tests" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include=".venv\">
+    <Interpreter Include="..\.venv\">
       <Id>.venv</Id>
       <Description>.venv (Python 3.9)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>

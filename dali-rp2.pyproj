@@ -28,11 +28,6 @@
     <Content Include="config\test_config.ini" />
     <Content Include="input\test_ods_rp2_input.ini" />
     <Content Include="mypy.ini" />
-    <Content Include="src\dali_rp2.egg-info\dependency_links.txt" />
-    <Content Include="src\dali_rp2.egg-info\entry_points.txt" />
-    <Content Include="src\dali_rp2.egg-info\requires.txt" />
-    <Content Include="src\dali_rp2.egg-info\SOURCES.txt" />
-    <Content Include="src\dali_rp2.egg-info\top_level.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="setup.py" />
@@ -63,7 +58,6 @@
     <Compile Include="src\dali\plugin\input\csv\manual.py" />
     <Compile Include="src\dali\plugin\input\csv\nexo.py" />
     <Compile Include="src\dali\plugin\input\csv\pionex.py" />
-    <Compile Include="src\dali\plugin\input\csv\robinhood.py" />
     <Compile Include="src\dali\plugin\input\csv\trezor.py" />
     <Compile Include="src\dali\plugin\input\csv\trezor_old.py" />
     <Compile Include="src\dali\plugin\input\csv\trezor_v2.py" />
@@ -117,7 +111,6 @@
     <Folder Include="src\dali\plugin\input\rest" />
     <Folder Include="src\dali\plugin\pair_converter" />
     <Folder Include="src\dali\plugin\pair_converter\csv" />
-    <Folder Include="src\dali_rp2.egg-info" />
     <Folder Include="tests" />
   </ItemGroup>
   <ItemGroup>
